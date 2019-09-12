@@ -1,7 +1,7 @@
 .top-nav {
     display: flex;
     flex-wrap: wrap;
-    background-color: indigo;
+    background-color: #101820FF;
     margin: 0;
     padding: 10px;
  }
@@ -17,13 +17,13 @@
     margin: auto;
     letter-spacing: 1px;
     text-align: center;
-    flex: 3;
+    flex: 2.5;
 }
 .top-nav-h1 h1 {
     margin: 0;
-    color: white;
-    border: 1px solid white;
-    background-color: white;
+    color: #101820FF;
+    border: no;
+    background-color: #FEE715FF;
     color: black;
     border-radius: 5px;
     padding: 5px;
@@ -33,6 +33,10 @@
     text-decoration: none;
     color: white;
     margin: 0px 5px;
+    transition: .3s;
+}
+.top-nav-link a:hover {
+    color: #FEE715FF;
 }
 .top-nav-link .sign {
     float: left;
@@ -41,7 +45,6 @@
     flex:1;
     position: relative;
     margin: auto;
-    float: right;
     width: 100%;
 }
 .top-nav-search input {
@@ -49,4 +52,26 @@
     border-radius: 5px;
     border: none;
     width: 15em;
+    float: right;
+
+}
+.icon-nav-link {
+    position: relative;
+    margin:auto;
+    flex: .3;
+    border: none;
+ }
+.icon-nav-link a {
+    color: #101820FF;
+    text-decoration: none;
+}
+.icon-nav-link img {
+    padding: 5px;
+    border-radius: 50%;
+    background-color:  #FEE715FF;
+    margin-left: 2em;
+    transition: .3s;
+}
+.icon-nav-link img:hover {
+    opacity: .9;
 }
