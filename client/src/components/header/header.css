@@ -1,0 +1,52 @@
+.top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: indigo;
+    margin: 0;
+    padding: 10px;
+ }
+.top-nav-h1 {
+    text-align: center;
+    flex: .4;
+}
+.top-nav-h1:hover {
+    cursor: pointer;
+}
+.top-nav-link {
+    position: relative;
+    margin: auto;
+    letter-spacing: 1px;
+    text-align: center;
+    flex: 3;
+}
+.top-nav-h1 h1 {
+    margin: 0;
+    color: white;
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    letter-spacing: 5px;
+ }
+.top-nav-link a {
+    text-decoration: none;
+    color: white;
+    margin: 0px 5px;
+}
+.top-nav-link .sign {
+    float: left;
+}
+.top-nav-search {
+    flex:1;
+    position: relative;
+    margin: auto;
+    float: right;
+    width: 100%;
+}
+.top-nav-search input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 15em;
+}
