@@ -1,7 +1,8 @@
+ 
 .section-body {
     border: 1px solid wheat;
     margin: 10px;
-    background-color: #FEE715FF;
+    background-color: lightgreen;
     border-radius: 1em;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     height: 25em;
