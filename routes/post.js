@@ -21,7 +21,9 @@ router.post('/', (req, res) => {
 //read all posts
 router.get('/', (req, res) => {
     Post.find()
-    .then(post => res.json(post))
+    .then(post => {
+            res.json(post)
+    })
 });
 
 //edit post
