@@ -3,8 +3,7 @@ import {BrowserRouter as Router,Link} from 'react-router-dom';
 import '../header/header.css';
 import '../header/adminmodal.css';
 import PersonSvg from './img/icon.svg';
-// import {AdminForm,showModal} from '../adminmodal/adminmodal';
-
+ 
 class Header extends React.Component {
     state = {
         isVisible:true
@@ -12,6 +11,11 @@ class Header extends React.Component {
     toggleBox = () => this.setState(prevState => ({isVisible: !prevState.isVisible}));
     render(){
         const {isVisible} = this.state
+        window.addEventListener('click', (e) => {
+                if(e.target.className === 'modal open'){
+                   return this.toggleBox()
+                }
+        });
         return (
             <div>
                 <div className="top-nav">
@@ -45,10 +49,16 @@ class Header extends React.Component {
                             <h1>Signin</h1>
                         </div>
                         <div className="modal-body">
-                            <p>Details</p>
+                             <form action="/admin">
+                                <label>Username</label>
+                                 <input type="email" placeholder="Username or Email"/>
+                                 <label>Password</label>
+                                 <input type="text" placeholder="Password"/>
+                                 <input className="submit-btn" type="submit" placeholder="Submit"/>
+                             </form>
                         </div>
-                        <div>
-                            <p>Footer</p>
+                        <div className="modal-footer">
+                            <p>Only Page Admins with @Blog's Credentials are allowed to log in</p>
                         </div>
                     </div>
                 </div>
