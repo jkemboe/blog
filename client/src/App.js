@@ -5,13 +5,16 @@ import Header from './components/header/header';
 import Section from './components/section/section';
 
 import AdminPanel from './components/adminpanel/adminpanel';
+import ReadMore from './components/readmore/readmore';
+
 import './App.css';
 
 function Main() {
   return (
     <Router>
         <Route exact path="/" component={App}/>
-        <Route path="/admin" component={AdminPanel}/>
+        <Route exact path="/admin" component={AdminPanel}/>
+        <Route exact path="/more" component={ReadMore}/>
     </Router>
   )
 }

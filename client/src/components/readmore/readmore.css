@@ -1,0 +1,36 @@
+.readmore-body {
+    position: relative;
+    border: 1px solid white;
+    height: auto;
+    margin: 1em auto;
+    width: 32em;
+    background-color: white;
+    padding: 30px;
+}
+.readmore-body,
+.readmore-body::before,
+.readmore-body::after {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    border: 1px solid #bbb;
+}
+
+.readmore-body::before,
+.readmore-body::after {
+    content: "";
+    position: absolute;
+    height: 95%;
+    width: 99%;
+    background-color: #eee;
+}
+.readmore-body::before {
+    right: 15px;
+    top: 0;
+    transform: rotate(-1deg);
+    z-index: -1;
+}
+.readmore-body::after {
+    top: 5px;
+    right: -5px;
+    transform: rotate(1deg);
+    z-index: -2;
+}
