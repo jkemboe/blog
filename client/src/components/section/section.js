@@ -72,6 +72,7 @@ function Section(props){
                 </div>
                 <Link to="/more" className="read-more">Read More</Link>
                 <span className="date-style">{props.date}</span>
+                
                 </div>
               )
      })}
