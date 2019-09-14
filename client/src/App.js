@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Header from './components/header/header';
 import Section from './components/section/section';
+import Footer from './components/footer/footer';
 
 import AdminPanel from './components/adminpanel/adminpanel';
 import ReadMore from './components/readmore/readmore';
@@ -26,6 +27,7 @@ function App() {
         <div className="main">
           <Section/>
         </div>
+        <Footer/>
     </div>
   );
 }

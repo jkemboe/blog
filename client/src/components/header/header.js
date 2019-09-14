@@ -20,21 +20,17 @@ class Header extends React.Component {
             <div>
                 <div className="top-nav">
                     <div className="top-nav-h1">
-                        <h1>BCC</h1>
+                        <h1>&copy;Maasai</h1>
                     </div>
                     <Router>
                         <div className="icon-nav-link">
                             <Link to="#" className="sign" onClick={this.toggleBox}><img src={PersonSvg} alt="icon"/></Link>
                         </div>
                         <div className="top-nav-link">
-                            <Link to="#">World</Link>
-                            <Link to="#">US Politics</Link>
-                            <Link to="#">Business</Link>
-                            <Link to="#">Health</Link>
-                            <Link to="#">Entertainment</Link>
-                            <Link to="#">Travel</Link>
-                            <Link to="#">Tech</Link>
-                            <Link to="#">Sports</Link>
+                            <Link to="#">Javascript</Link>
+                            <Link to="#">HTML5</Link>
+                            <Link to="#">CSS</Link>
+                            <Link to="#">Contact</Link>
                         </div>
                     </Router>
                     <div className="top-nav-search">

@@ -1,0 +1,12 @@
+.footer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 1em;
+}
+.footer span {
+    color: #ddd;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: .3px;
+}
