@@ -55,133 +55,30 @@ function Section(props){
         <div className="section-body">
             <Router>
             <div className="section-link">
-        <Link to="#">Breaking</Link>
-    </div>
+                <Link to="#">Javascript</Link>
+            </div>
+
     <div className="main-section">
        {props.main.map((val,i) => {
               return (
                 <div className="section-head" key={i}>
                 <h2>{val}</h2>
-                {props.img[0]}
+                <img src={props.img[0]} alt={props.img[0]}/>
                 <span className="author-par">Author: <Link to="#" className="author">{props.author[0]}</Link></span>
                 <div className="section-content">
                     <p>
                         {props.body[0]}
                     </p>
                 </div>
-                <Link to="#" className="read-more">Read More</Link>
+                <Link to="/more" className="read-more">Read More</Link>
                 <span className="date-style">{props.date}</span>
                 </div>
               )
      })}
-     {/* <div className="section-head">
-                <h2>Blog Title</h2>
-                <img alt="logo"/>
-                <span className="author-par">Author: <Link to="#" className="author">Maasai Sang</Link></span>
-                <div className="section-content">
-                    <p>Lorem Ipsum: Author: Maasai Sang
-                    Lorem Ipsum: Author: 
-                    </p>
-                </div>
-             
-                <Link to="#" className="read-more">Read More</Link>
-                <span className="date-style">Date: 09/9/2019</span>
-            </div> */}
-           
-            {/* <div className="section-head">
-                <h2>Blog Title</h2>
-                <img alt="logo"/>
-                <span className="author-par">Author: <Link to="#" className="author">Maasai Sang</Link></span>
-                <div className="section-content">
-                    <p>Lorem Ipsum: Author: Maasai Sang
-                    Lorem Ipsum: Author: 
-                    </p>
-                </div>
-             
-                <Link to="#" className="read-more">Read More</Link>
-                <span className="date-style">Date: 09/9/2019</span>
-            </div> */}
-            {/* <div className="section-head">
-                <h2>Blog Title</h2>
-                <img alt="logo"/>
-                <span className="author-par">Author: <Link to="#" className="author">Maasai Sang</Link></span>
-                <div className="section-content">
-                    <p>Lorem Ipsum: Author: Maasai Sang
-                    Lorem Ipsum: Author: 
-                    </p>
-                </div>
-             
-                <Link to="#" className="read-more">Read More</Link>
-                <span className="date-style">Date: 09/9/2019</span>
-            </div>
-            <div className="section-head">
-                <h2>Blog Title</h2>
-                <img alt="logo"/>
-                <span className="author-par">Author: <Link to="#" className="author">Maasai Sang</Link></span>
-                <div className="section-content">
-                    <p>Lorem Ipsum: Author: Maasai Sang
-                    Lorem Ipsum: Author: 
-                    </p>
-                </div>
-             
-                <Link to="#" className="read-more">Read More</Link>
-                <span className="date-style">Date: 09/9/2019</span>
-            </div>
-            <div className="section-head">
-                <h2>Blog Title</h2>
-                <img alt="logo"/>
-                <span className="author-par">Author: <Link to="#" className="author">Maasai Sang</Link></span>
-                <div className="section-content">
-                    <p>Lorem Ipsum: Author: Maasai Sang
-                    Lorem Ipsum: Author: 
-                    </p>
-                </div>
-             
-                <Link to="#" className="read-more">Read More</Link>
-                <span className="date-style">Date: 09/9/2019</span>
-            </div>
-            <div className="section-head">
-                <h2>Blog Title</h2>
-                <img alt="logo"/>
-                <span className="author-par">Author: <Link to="#" className="author">Maasai Sang</Link></span>
-                <div className="section-content">
-                    <p>Lorem Ipsum: Author: Maasai Sang
-                    Lorem Ipsum: Author: 
-                    </p>
-                </div>
-             
-                <Link to="#" className="read-more">Read More</Link>
-                <span className="date-style">Date: 09/9/2019</span>
-            </div>
-            <div className="section-head">
-                <h2>Blog Title</h2>
-                <img alt="logo"/>
-                <span className="author-par">Author: <Link to="#" className="author">Maasai Sang</Link></span>
-                <div className="section-content">
-                    <p>Lorem Ipsum: Author: Maasai Sang
-                    Lorem Ipsum: Author: 
-                    </p>
-                </div>
-             
-                <Link to="#" className="read-more">Read More</Link>
-                <span className="date-style">Date: 09/9/2019</span>
-            </div>
-            <div className="section-head">
-                <h2>Blog Title</h2>
-                <img alt="logo"/>
-                <span className="author-par">Author: <Link to="#" className="author">Maasai Sang</Link></span>
-                <div className="section-content">
-                    <p>Lorem Ipsum: Author: Maasai Sang
-                    Lorem Ipsum: Author: 
-                    </p>
-                </div>
-             
-                <Link to="#" className="read-more">Read More</Link>
-                <span className="date-style">Date: 09/9/2019</span>
-            </div> */}
+        
     </div>
             </Router>
-           
+ 
         </div>
     )
 }
