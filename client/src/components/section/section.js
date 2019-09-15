@@ -10,6 +10,7 @@ class MainSection extends React.Component {
         body:[],
         date:Date.now(),
         intervalIsSet: false,
+        all:[]
     }
     componentDidMount(){
         this.getDataFromDB();
@@ -29,23 +30,20 @@ class MainSection extends React.Component {
         .then(res => res.json())
         .then(data => {
             data.map((val) => {
-                const {postTitle,postAvatar,postAuthor,postBody} = val  
                  return this.setState((prev) => {
                     return {
-                        main: prev.main.concat(postTitle),
-                        img: prev.img.concat(postAvatar),
-                        author: prev.author.concat(postAuthor),
-                        body: prev.body.concat(postBody)
+                        all: prev.all.concat(val)
                     }
                 })
             });
         })
     }
+    
     render(){
         return(
             <div>
-                <Section main={this.state.main} img={this.state.img.map(val => val)} author={this.state.author} body={this.state.body} date={this.state.date}/>
-            </div>
+                     <Section title={this.state.all}/>
+             </div>
         )
     }
 }
@@ -54,34 +52,29 @@ function Section(props){
     return(
         <div className="section-body">
             <Router>
-            <div className="section-link">
+            {/* <div className="section-link">
                 <Link to="#">Javascript</Link>
-            </div>
+            </div> */}
 
     <div className="main-section">
-       {props.main.map((val,i) => {
-              return (
-                <div className="section-head" key={i}>
-                <h2>{val}</h2>
-                <img src={props.img[0]} alt={props.img[0]}/>
-                <span className="author-par">Author: <Link to="#" className="author">{props.author[0]}</Link></span>
+        {props.title.map(({postTitle,postAvatar,postAuthor,postBody,postDate,_id},i) => {
+            return ( 
+            <div className="section-head" key={i}> 
+                <h2 key={_id}>{postTitle}</h2>
+                <img src={postAvatar} alt={postAvatar}/>
+                <span className="author-par">Author: <Link to="#" className="author">{postAuthor}</Link></span>
                 <div className="section-content">
-                    <p>
-                        {props.body[0]}
-                    </p>
+                    <p>{postBody}</p>
                 </div>
                 <Link to="/more" className="read-more">Read More</Link>
-                <span className="date-style">{props.date}</span>
-                
-                </div>
-              )
-     })}
-        
-    </div>
+                <span className="date-style">{postDate}</span>
+            </div>
+            )
+        })}
+     </div>
             </Router>
  
         </div>
     )
 }
-
 export default MainSection;

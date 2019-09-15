@@ -1,11 +1,51 @@
-.readmore-body {
+ 
+ .trending-topics {
+    position: absolute;
+    margin-left: 1em;
+    color: #101820FF;
+    border: 1px solid #eee;
+    width: 18%;
+    padding: 0 1em;
+    background: #eee;
+ }
+ .trending-topics:hover {
+    cursor: pointer;
+}
+ .trending-topics .view-more {
+     float: right;
+ }
+ .more-topics {
+     display: none;
+     position: absolute;
+     top: 9.78em;
+     list-style-type: none;
+     margin-left: 1em;
+     background: #eee;
+     width: 20%;
+     border: 2px solid #eee;
+ }
+ .more-topics li {
+     padding: 1em ;
+ }
+ .more-topics li:hover{ 
+     cursor: pointer;
+     border-bottom: 1px solid #eee;
+     opacity: .9;
+     background: #bbb;
+ }
+.more-topics li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #101820FF;
+}
+ .readmore-body {
     position: relative;
     border: 1px solid white;
     height: auto;
     margin: 1em auto;
     width: 32em;
     background-color: white;
-    padding: 30px;
+    padding: 2em;
 }
 .readmore-body,
 .readmore-body::before,
@@ -34,3 +74,5 @@
     transform: rotate(1deg);
     z-index: -2;
 }
+ 
+ 
