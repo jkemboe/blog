@@ -108,7 +108,7 @@
     color: #101820FF;
 }
 .section-content {
-    height: auto;
+    height: 4em;
     overflow: hidden;
 }
 .section-content p {
