@@ -38,7 +38,6 @@ class MainSection extends React.Component {
             });
         })
     }
-    
     render(){
         return(
             <div>
@@ -52,12 +51,12 @@ function Section(props){
     return(
         <div className="section-body">
             <Router>
-            {/* <div className="section-link">
+            <div className="section-link">
                 <Link to="#">Javascript</Link>
-            </div> */}
+            </div>
 
     <div className="main-section">
-        {props.title.map(({postTitle,postAvatar,postAuthor,postBody,postDate,_id},i) => {
+        {props.title.reverse().map(({postTitle,postAvatar,postAuthor,postBody,postDate,_id},i) => {
             return ( 
             <div className="section-head" key={i}> 
                 <h2 key={_id}>{postTitle}</h2>
