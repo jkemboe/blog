@@ -103,6 +103,7 @@
     width: auto;
     height: 15vh;
     margin-bottom: 5px;
+    margin: 0 auto;
 }
 .section-head h2 {
     margin: .3em 0;

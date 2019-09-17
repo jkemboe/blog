@@ -1,21 +1,23 @@
 const express = require('express');
 const router = express.Router();
-
+const app = express()
+const multer = require('multer');
+const upload = multer({dest:'./uploads'});
+const path = require('path');
+const fs = require('fs');
 const Post = require('../models/Post');
 
-//create post
-router.post('/', (req, res) => {
-    const {postTitle,postAvatar,postAuthor,postBody,postDate,postTag,postFeature} = req.body;
+router.post('/',upload.single('img'),(req,res) => {
+    const {postTitle,postAuthor,postBody,postTag,postFeature,postAvatar} = req.body;
     const blogPost = new Post({
-         postTitle,
-         postAvatar,
-         postAuthor,
-         postBody,
-         postTag,
-         postFeature,
-         postDate
+        postTitle,
+        postAuthor,
+        postAvatar,
+        postBody,
+        postTag,
+        postFeature,
     });
-    blogPost.save()
+    blogPost.save();
 })
 
 //read all posts

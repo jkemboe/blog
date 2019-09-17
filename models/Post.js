@@ -19,17 +19,12 @@ const PostSchemas = mongoose.Schema({
         required: true
     },
     postFeature: {
-        type: Boolean,
+        type: String,
         required: false
     },
     postTag: {
         type: String,
         required: true
-    },
-    postDate: {
-        type: Date,
-        required: true,
-        default: Date.now()
     }
 });
 

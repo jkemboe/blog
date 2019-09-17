@@ -4,11 +4,7 @@ import '../section/section.css';
 
 class MainSection extends React.Component {
     state = {
-        main:[],
-        img:[],
-        author:[],
-        body:[],
-        date:Date.now(),
+        date: new Date().getFullYear(),
         intervalIsSet: false,
         all:[]
     }
@@ -29,9 +25,9 @@ class MainSection extends React.Component {
         fetch('http://127.0.0.1:4000/posts')
         .then(res => res.json())
         .then(data => {
-            data.map((val) => {
+            data.reverse().map((val) => {
                  return this.setState((prev) => {
-                    return {
+                     return {
                         all: prev.all.concat(val)
                     }
                 })
@@ -41,13 +37,13 @@ class MainSection extends React.Component {
     render(){
         return(
             <div>
-                     <Section title={this.state.all}/>
+                     <Section title={this.state.all} date={this.state.date}/>
              </div>
         )
     }
 }
 
-function Section(props){
+function Section({title,date}){
     return(
         <div className="section-body">
             <Router>
@@ -56,7 +52,7 @@ function Section(props){
             </div>
 
     <div className="main-section">
-        {props.title.reverse().map(({postTitle,postAvatar,postAuthor,postBody,postDate,_id},i) => {
+        {title.map(({postTitle,postAvatar,postAuthor,postBody,_id},i) => {
             return ( 
             <div className="section-head" key={i}> 
                 <h2 key={_id}>{postTitle}</h2>
@@ -66,7 +62,7 @@ function Section(props){
                     <p>{postBody}</p>
                 </div>
                 <Link to="/more" className="read-more">Read More</Link>
-                <span className="date-style">{postDate}</span>
+                <span className="date-style">{date}</span>
             </div>
             )
         })}
