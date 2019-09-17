@@ -1,14 +1,14 @@
 import React from 'react';
 import {BrowserRouter as Router ,Link} from 'react-router-dom';
 import '../section/section.css';
-
+ 
 class MainSection extends React.Component {
     state = {
         date: new Date().getFullYear(),
         intervalIsSet: false,
         all:[]
     }
-    componentDidMount(){
+    componentWillMount(){
         this.getDataFromDB();
         if(this.state.intervalIsSet){
             let interval = setInterval(this.getDataFromDB,1000);
@@ -67,9 +67,11 @@ function Section({title,date}){
             )
         })}
      </div>
-            </Router>
+             </Router>
  
         </div>
     )
 }
+ 
+ 
 export default MainSection;
